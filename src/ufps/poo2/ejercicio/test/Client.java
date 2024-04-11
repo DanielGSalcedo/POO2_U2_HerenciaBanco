@@ -62,7 +62,7 @@ public class Client {
 		
 		System.out.println("*** Val = "+bank.getBalance(3379844));
 		
-		// bank.sendLetterToOverdraftAccounts();
+		bank.sendLetterToOverdraftAccounts();
 
 		// ==================================================
 

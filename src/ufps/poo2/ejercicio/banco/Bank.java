@@ -38,6 +38,14 @@ public class Bank {
         }
     }
 
+    public void sendLetterToOverdraftAccounts(){
+        for (Account account : accounts) {
+            if (account.getBalance() < 0) {
+                System.out.println("Sending letter to this account: " + account.getAccountNumber());
+            }
+        }
+    }
+
     public double getBalance(int accountCode) {
         return findAccount(accountCode).getBalance();
     }

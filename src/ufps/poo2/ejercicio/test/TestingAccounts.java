@@ -86,53 +86,75 @@ public class TestingAccounts {
         // TESTING BANK CLASS
         // ================================================
 
-        // println(separator);
-        // println("\t\tTesting bank class...\t\t");
-        // println(separator);
+        println(separator);
+        println("\t\tTesting bank class...\t\t");
+        println(separator);
 
-        // SavingsAccount x1 = new SavingsAccount(1);
-        // CurrentAccount x2 = new CurrentAccount(2);
-        // Account x3 = new Account(3);
-        // SavingsAccount x4 = new SavingsAccount(4);
-        // CurrentAccount x5 = new CurrentAccount(5);
-        // Account x6 = new Account(6);
-        // SavingsAccount x7 = new SavingsAccount(7);
-        // CurrentAccount x8 = new CurrentAccount(8);
-        // Account x9 = new Account(9);
 
-        // Bank bank = new Bank();
+        Bank bank = new Bank();
 
-        // bank.add(x1);
-        // bank.add(x2);
-        // bank.add(x3);
-        // bank.add(x4);
-        // bank.add(x5);
-        // bank.add(x6);
-        // bank.add(x7);
-        // bank.add(x8);
-        // bank.add(x9);
+        bank.
 
-        // System.out.println(bank);
+        bank.openAccount('A', 0);
+        bank.openAccount('B', 1);
+        bank.openAccount('C', 2);
 
-        // println(sepLight);
 
-        // bank.showAccount(1);
+        System.out.println(bank);
 
-        // println(sepLight);
+        println(sepLight);
 
-        // bank.deposit(1000, 1);
-        // bank.withdraw(500, 1);
+        bank.showAccount(1);
 
-        // System.out.println("\nBalance of account number 1 is: " +
-        // bank.showBalance(1));
+        println(sepLight);
 
-        // println(sepLight);
+        bank.findAccount(0).deposit(1000);
+        bank.findAccount(0).withdraw(1000);
 
-        // bank.showAccount(1);
+        System.out.println("\nBalance of account number 1 is: " +
+        bank.getBalance(0));
 
-        // println(separator);
-        // println("\t\tFinalizing testing...\t\t");
-        // println(separator);
+        println(sepLight);
+
+        bank.showAccount(1);
+
+        println(sepLight);
+
+        bank.findAccount(1).deposit(1500);
+        bank.findAccount(1).withdraw(1500);
+
+        System.out.println("\nBalance of account number 1 is: " +
+        bank.getBalance(1));
+
+        println(sepLight);
+
+        bank.findAccount(6).deposit(1000);
+        bank.findAccount(6).withdraw(1000);
+
+        System.out.println("\nBalance of account number 1 is: " +
+        bank.getBalance(6));
+
+        println(sepLight);
+
+        bank.findAccount(2).deposit(1000);
+        bank.findAccount(2).withdraw(2000);
+
+        System.out.println("\nBalance of account number 1 is: " +
+        bank.getBalance(0));
+
+        println(sepLight);
+
+        bank.showAccount(1);
+        println(sepLight);
+
+        bank.showAccount(1);
+        println(sepLight);
+
+        bank.showAccount(1);
+
+        println(separator);
+        println("\t\tFinalizing testing...\t\t");
+        println(separator);
     }
 
     public static void println(Object obj) {

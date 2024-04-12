@@ -14,7 +14,7 @@ public class Bank {
         if(isAccount(accnum)) throw new RuntimeException("Account number already exists.");
         if(tipo != 'C' && tipo != 'A') throw new RuntimeException("Account type must be 'C' or 'A'.");
         if(tipo == 'C') accounts.add(new CurrentAccount(accnum));
-        if(tipo == 'A') accounts.add(new SavingsAccount(accnum);
+        if(tipo == 'A') accounts.add(new SavingsAccount(accnum));
     }
 
     public void closeAccount(Account account){

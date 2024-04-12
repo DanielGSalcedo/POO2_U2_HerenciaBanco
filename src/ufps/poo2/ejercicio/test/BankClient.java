@@ -7,6 +7,7 @@ public class BankClient {
 
         String separator = "\n#################################################################\n";
         String sepLight = "\n------------------------------------------------------------------\n";
+
         // ================================================
         // TESTING BANK CLASS
         // ================================================
@@ -27,9 +28,9 @@ public class BankClient {
         println(sepLight);
 
         bank.setInterestAccount(1, 0.1);
-        bank.findAccount(1).deposit(1000);
-        bank.findAccount(1).withdraw(500);
-        bank.findAccount(1).deposit(1000);
+        bank.payDividend(1, 1000);
+        bank.withdrawAccount(1, 500);
+        bank.payDividend(1, 1000);
 
         println(sepLight);
 
@@ -37,25 +38,26 @@ public class BankClient {
 
         println(sepLight);
 
-        bank.findAccount(2).deposit(1500);
-        bank.setOverdraftAccount(2, 100.0);
-        bank.findAccount(2).withdraw(2500);
+        bank.setInterestAccount(1, 0.1);
+        bank.payDividend(1, 1000);
+        bank.withdrawAccount(1, 500);
+        bank.payDividend(1, 1000);
 
         System.out.println("\nBalance of account number 2 is: " +
         bank.getBalance(2));
 
         println(sepLight);
 
-        bank.findAccount(6).deposit(1000);
-        bank.findAccount(6).withdraw(1000);
+        bank.payDividend(6, 1000);
+        bank.withdrawAccount(6, 1000);
 
         System.out.println("\nBalance of account number 1 is: " +
         bank.getBalance(6));
 
         println(sepLight);
 
-        bank.findAccount(2).deposit(1000);
-        bank.findAccount(2).withdraw(2000);
+        bank.payDividend(2,1000);
+        bank.withdrawAccount(2,2000);
 
         System.out.println("\nBalance of account number 1 is: " +
         bank.getBalance(0));

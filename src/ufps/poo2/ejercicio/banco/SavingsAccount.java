@@ -16,7 +16,6 @@ public class SavingsAccount extends Account {
     public void deposit(double sum) {
         if (sum < 0 ) throw new RuntimeException("Deposit amount must be greater than 0.");
         double dex = this.getBalance() * this.getInterest();
-        if (this.getBalance() > 0) super.deposit(sum + dex); else super.deposit(sum);
     }
 
     public double getInterest() {

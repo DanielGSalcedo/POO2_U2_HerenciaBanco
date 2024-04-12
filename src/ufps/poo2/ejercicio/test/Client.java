@@ -38,33 +38,33 @@ public class Client {
 		// Debe descomentar este bloque cuando implemente las clases
 		// -------------------------------------------------
 
-		// Bank bank = new Bank();
+		Bank bank = new Bank();
 		
-		// bank.openAccount('A', 3354678);
-		// bank.openAccount('A', 3359302);
-		// bank.openAccount('C', 3379844);
+		bank.openAccount('A', 3354678);
+		bank.openAccount('A', 3359302);
+		bank.openAccount('C', 3379844);
 		
-		// bank.payDividend(3354678, 10);
-		// bank.payDividend(3354678, 30);
+		bank.payDividend(3354678, 10);
+		bank.payDividend(3354678, 30);
 		
-		// bank.payDividend(3359302, 50);
-		// bank.payDividend(3359302, 50);
+		bank.payDividend(3359302, 50);
+		bank.payDividend(3359302, 50);
 		
-		// bank.payDividend(3379844, 10);
-		// bank.payDividend(3379844, 10);
+		bank.payDividend(3379844, 10);
+		bank.payDividend(3379844, 10);
 		
-		// System.out.println("*** Val = "+bank.getBalance(3379844));
+		System.out.println("*** Val = "+bank.getBalance(3379844));
 		
-		// bank.withdrawAccount(3379844, 20);
-		// bank.withdrawAccount(3379844, 5);
+		bank.withdrawAccount(3379844, 20);
+		bank.withdrawAccount(3379844, 5);
 		
-		// System.out.println("*** Val = "+bank.getBalance(3379844));
+		System.out.println("*** Val = "+bank.getBalance(3379844));
 		
-		// bank.withdrawAccount(3379844, 15);
+		bank.withdrawAccount(3379844, 15);
 		
-		// System.out.println("*** Val = "+bank.getBalance(3379844));
+		System.out.println("*** Val = "+bank.getBalance(3379844));
 		
-		// bank.sendLetterToOverdraftAccounts();
+		bank.sendLetterToOverdraftAccounts();
 
 		// ==================================================
 
@@ -84,7 +84,6 @@ public class Client {
 		 *** Val = -5.0
 		 * Sending letter to this 3379844 account
 		 */
-
 	}
 
 }

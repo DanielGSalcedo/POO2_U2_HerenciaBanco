@@ -72,7 +72,22 @@ public class Bank {
         }
         return msg;
     }
+    public void  setOverdraftAccount(int accountCode, double x){
+        if(findAccount(accountCode)instanceof CurrentAccount){
+            ((CurrentAccount)findAccount(accountCode)).setLimiteSobregiro(x);
+        }else{
+            throw new RuntimeException("Account is not a Current Account.");
+        }
+    }
 
+    public void setInterestAccount(int accountCode, double x){
+        if(findAccount(accountCode)instanceof SavingsAccount){
+            ((SavingsAccount)findAccount(accountCode)).setInterest(x);
+        }else{
+            throw new RuntimeException("Account is not a Savings Account.");
+        }
+    }
+    
     private boolean isAccount(int accnum){
         for (Account account : accounts) {
             if(account.getAccountNumber() == accnum){

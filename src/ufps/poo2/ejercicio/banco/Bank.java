@@ -9,10 +9,12 @@ public class Bank {
     public Bank() {
     }
 
-    public void openAccount(char name, int accnum){
+    public void openAccount(char tipo, int accnum){
         if(accnum <= 0 ) throw new RuntimeException("Account number must be greater than 0.");
-        if(isAccount(accnum)) throw new RuntimeException("Account number already exists."); 
-        accounts.add(new Account(accnum));
+        if(isAccount(accnum)) throw new RuntimeException("Account number already exists.");
+        if(tipo != 'C' && tipo != 'A') throw new RuntimeException("Account type must be 'C' or 'A'.");
+        if(tipo == 'C') accounts.add(new CurrentAccount(accnum));
+        if(tipo == 'A') accounts.add(new SavingsAccount(accnum);
     }
 
     public void closeAccount(Account account){
@@ -50,7 +52,7 @@ public class Bank {
     public void sendLetterToOverdraftAccounts(){
         for (Account account : accounts) {
             if (account.getBalance() < 0) {
-                System.out.println("Sending letter to this account: " + account.getAccountNumber());
+                System.out.println("Sending letter to this account: " + account.getAccountNumber()+" account");
             }
         }
     }

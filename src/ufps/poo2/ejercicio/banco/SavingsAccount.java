@@ -15,7 +15,8 @@ public class SavingsAccount extends Account {
     @Override
     public void deposit(double sum) {
         if (sum < 0 ) throw new RuntimeException("Deposit amount must be greater than 0.");
-        double dex = this.getBalance() * this.getInterest();
+        double x = this.getBalance() * this.getInterest();
+        super.deposit(sum + x); 
     }
 
     public double getInterest() {

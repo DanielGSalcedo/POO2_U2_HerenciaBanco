@@ -13,10 +13,10 @@ public class CurrentAccount extends Account{
     public void withdraw(double num){
         double i = getBalance() + getLimiteSobregiro();
         if(num < 0) throw new RuntimeException("Withdrawal amount must be greater than 0.");
-        if(i > num){
+        if(i >= num){
             super.withdraw(num);  
         }else{
-            System.err.println("Account.withdraw(...): " + "cannot withdraw this amount.");
+            System.err.println("Account.withdraw(): " + "cannot withdraw this amount.");
         }
     }
 
